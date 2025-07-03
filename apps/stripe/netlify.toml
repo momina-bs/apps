@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"  # Match your local version
+  NODE_VERSION = "20.16.0"  # Match your local version
   # Add ALL required environment variables here
   SALEOR_API_URL = "https://staging-api.tirekart.com/graphql/"
   STRIPE_SECRET_KEY = "sk_test_51Rc6J6PMcwjkJvq4ofaHeNum01BdVLpk7b7tE3SzMTYFcIKhVdaQc6JLPhuVBcia6HgaCUplfFsfzfc4C9Gvn3xl00DV5lWch9"
