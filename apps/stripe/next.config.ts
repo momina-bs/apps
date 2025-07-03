@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["@sentry/nextjs", "@sentry/node"],
     serverComponentsExternalPackages: ["stripe"],
   },
-  output: "standalone",
+  output: "export",
   bundlePagesRouterDependencies: true,
   webpack: (config, { isServer }) => {
     if (isServer) {
