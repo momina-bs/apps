@@ -1,9 +1,13 @@
-# netlify.toml
 [build]
-command = "pnpm build"
-publish = ".next"
+  command = "fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && pnpm install --frozen-lockfile && pnpm build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY = "pk_test_51RcRTj2NJWK1pf6gF8vIfaHXczjZ9CDwnqzHNr3HpyTQuxsiug08SDY9HaGtVCboHOWeDTPyNiOKnlvnwmfQIW3K00x1qdxo5s"
+  SALEOR_API_URL = "https://staging-api.tirekart.com/graphql/"
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
