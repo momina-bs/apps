@@ -1,5 +1,5 @@
 [build]
-  command = "fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && pnpm install --frozen-lockfile && pnpm build"
+  command = "pnpm install --frozen-lockfile && pnpm build"
   publish = "out"
 
 [build.environment]
