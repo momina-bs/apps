@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "saleor-app-payment-stripe",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": true,
   "type": "module",
   "scripts": {
@@ -105,6 +105,7 @@
     "graphql-config": "5.0.3",
     "graphql-tag": "2.12.6",
     "json-schema-to-typescript": "15.0.4",
+    "msw": "2.10.2",
     "next-test-api-route-handler": "4.0.16",
     "tsx": "4.19.3",
     "typescript": "5.8.2",
