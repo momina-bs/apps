@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@sentry/nextjs", "@sentry/node"],
   },
-  output: "standalone",
   bundlePagesRouterDependencies: true,
   webpack: (config, { isServer }) => {
     if (isServer) {
