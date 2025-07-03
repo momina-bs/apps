@@ -1,8 +1,13 @@
+[build]
+  command = "NODE_OPTIONS=--max_old_space_size=2048 pnpm build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"
-  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY = "pk_test_51RcRTj2NJWK1pf6gF8vIfaHXczjZ9CDwnqzHNr3HpyTQuxsiug08SDY9HaGtVCboHOWeDTPyNiOKnlvnwmfQIW3K00x1qdxo5s"
+  NODE_VERSION = "20"  # Match your local version
+  # Add ALL required environment variables here
   SALEOR_API_URL = "https://staging-api.tirekart.com/graphql/"
+  STRIPE_SECRET_KEY = "sk_test_51Rc6J6PMcwjkJvq4ofaHeNum01BdVLpk7b7tE3SzMTYFcIKhVdaQc6JLPhuVBcia6HgaCUplfFsfzfc4C9Gvn3xl00DV5lWch9"
+  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY = "pk_test_51Rc6J6PMcwjkJvq4i3EqFNiVz0LT877sH7cEt8AfuOEC68Jp8kjr4tW0FbsQtIRSfHulXin5hfyY45uOq4AOUZfJ00qbfr18Q8"
 
 [[redirects]]
   from = "/*"

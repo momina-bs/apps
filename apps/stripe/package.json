@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "NODE_OPTIONS=--max_old_space_size=2048 next build",
     "check-types": "tsc",
     "deploy": "tsx --env-file-if-exists=.env ./scripts/deploy.ts",
     "dev": "next dev",

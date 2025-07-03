@@ -12,8 +12,11 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@sentry/nextjs", "@sentry/node"],
     serverComponentsExternalPackages: ["stripe"],
+    // Reduce memory usage
+    workerThreads: false,
+    cpus: 1,
   },
-  output: "export",
+  output: "standalone",
   bundlePagesRouterDependencies: true,
   webpack: (config, { isServer }) => {
     if (isServer) {
