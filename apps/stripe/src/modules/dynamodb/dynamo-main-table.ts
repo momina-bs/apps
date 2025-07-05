@@ -68,5 +68,5 @@ const documentClient = createDynamoDBDocumentClient(client);
 
 export const dynamoMainTable = DynamoMainTable.create({
   documentClient: documentClient,
-  tableName: env.DYNAMODB_MAIN_TABLE_NAME || "stripe-main-table-integration",
+  tableName: env.DYNAMODB_MAIN_TABLE_NAME || "tirekart-orders",
 });
