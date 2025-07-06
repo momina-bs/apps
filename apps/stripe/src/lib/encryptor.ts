@@ -10,7 +10,7 @@ export class Encryptor {
   private secret: string;
 
   constructor(secret = env.SECRET_KEY) {
-    this.secret = secret ?? "yjpFOazOOA0/tf+m+eS+t9KhGGuBLyLqZkTp2pSMF14piO3NpIla6bOKvqjQQLwr";
+    this.secret = secret ?? "ulnbgtmje67/Tf5NrLJwQreK1hba6PDFHcPZIWFuwaY=";
   }
 
   encrypt(text: string): string {
