@@ -166,7 +166,7 @@ export class NewStripeConfigTrpcHandler {
 
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
-          message: "Failed to create Stripe configuration. Data can't be saved.",
+          message: JSON.stringify(saveResult),
         });
       }
     });
