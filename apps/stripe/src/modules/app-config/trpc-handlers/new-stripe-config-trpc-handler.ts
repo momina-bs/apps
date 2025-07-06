@@ -161,15 +161,23 @@ export class NewStripeConfigTrpcHandler {
         appId: ctx.appId,
       });
 
-      if (saveResult.isErr()) {
-        captureException(saveResult.error);
-
-        // TODO Handle exact errors
-        throw new TRPCError({
-          code: "INTERNAL_SERVER_ERROR",
-          message: "Failed to create Stripe configuration. Data can't be saved.",
-        });
+      if (saveResult.isOk()) {
+        return;
       }
+
+      /*
+       * if (saveResult.isErr()) {
+       *   captureException(saveResult.error);
+       */
+
+      /*
+       *   // TODO Handle exact errors
+       *   throw new TRPCError({
+       *     code: "INTERNAL_SERVER_ERROR",
+       *     message: "Failed to create Stripe configuration. Data can't be saved.",
+       *   });
+       * }
+       */
     });
   }
 }

@@ -59,6 +59,7 @@
     "@trpc/next": "catalog:",
     "@trpc/react-query": "catalog:",
     "@trpc/server": "catalog:",
+    "@vercel/kv": "3.0.0",
     "@vercel/otel": "catalog:",
     "currency-codes": "2.2.0",
     "currency.js": "2.0.4",
